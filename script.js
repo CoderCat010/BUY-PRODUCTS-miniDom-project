@@ -85,6 +85,8 @@ const allProducts = document.getElementById('all-products');
 for(let allData of products.data){
     // create product card container 
     const cardsContainer = document.createElement('div');
+    // add class to style each one card
+    cardsContainer.classList.add('cards-container');
 
     // create img container
     const imgContainer = document.createElement('div');
