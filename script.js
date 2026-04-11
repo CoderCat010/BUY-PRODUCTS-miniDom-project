@@ -81,4 +81,21 @@ const itemsBtn = document.getElementById('items-button');
 const allProducts = document.getElementById('all-products');
 
 
+// get each product data through loop
+for(let allData of products.data){
+    // create product card container 
+    const cardsContainer = document.createElement('div');
 
+    // create img container
+    const imgContainer = document.createElement('div');
+    // add class to style each one img
+    imgContainer.classList.add('img-container');
+    // set attribute
+    const images = document.createElement('img');
+    images.setAttribute('src', allData.image);
+
+    // Append the image to the image container, then add the image container to the card, and finally add the card to the products section so it appears on the page.
+    imgContainer.appendChild(images);
+    cardsContainer.appendChild(imgContainer);
+    allProducts.appendChild(cardsContainer);
+}
