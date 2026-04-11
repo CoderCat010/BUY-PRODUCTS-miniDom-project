@@ -12,3 +12,34 @@ body{
     max-width: 1200px;
 }
 
+.search-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.search-product input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    width: 500px;
+    height: 30px;
+    padding: 0 10px;
+    background: none;
+}
+
+.search-product input:focus{
+    border-bottom: 1px solid blueviolet;
+}
+
+.search-product button{
+    padding: 10px 30px;
+    background-color: blueviolet;
+    border: none;
+    font-weight: 500;
+    color: papayawhip;
+    font-size: 14px;
+}
