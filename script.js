@@ -6,7 +6,7 @@ let products = {
       productName: "Regular White T-Shirt",
       category: "Topwear",
       price: "30",
-      image: "white-tshirt.jpg",
+      image: "./images/white-tshirt.jpg",
     },
 
     // product: 2
@@ -14,7 +14,7 @@ let products = {
       productName: "Beige Short Skirt",
       category: "Bottomwear",
       price: "49",
-      image: "short-skirt.jpg",
+      image: "./images/short-skirt.jpg",
     },
 
     // product: 3
@@ -22,7 +22,7 @@ let products = {
       productName: "Sporty SmartWatch",
       category: "Watch",
       price: "99",
-      image: "sporty-smartwatch.jpg",
+      image: "./images/sporty-smartwatch.jpg",
     },
 
     // product: 4
@@ -30,7 +30,7 @@ let products = {
       productName: "Basic Knitted Top",
       category: "Topwear",
       price: "29",
-      image: "knitted-top.jpg",
+      image: "./images/knitted-top.jpg",
     },
 
     // product: 5
@@ -38,7 +38,7 @@ let products = {
       productName: "Black Leather Jacket",
       category: "Jacket",
       price: "129",
-      image: "black-leather-jacket.jpg",
+      image: "./images/black-leather-jacket.jpg",
     },
 
     // product: 6
@@ -46,7 +46,7 @@ let products = {
       productName: "Stylish Pink Trousers",
       category: "Bottomwear",
       price: "89",
-      image: "pink-trousers.jpg",
+      image: "./images/pink-trousers.jpg",
     },
 
     // product: 7
@@ -54,7 +54,7 @@ let products = {
       productName: "Brown Men's Jacket",
       category: "Jacket",
       price: "189",
-      image: "brown-jacket.jpg",
+      image: "./images/brown-jacket.jpg",
     },
 
     // product: 8
@@ -62,7 +62,23 @@ let products = {
       productName: "Comfy Gray Pants",
       category: "Bottomwear",
       price: "49",
-      image: "comfy-gray-pants.jpg",
+      image: "./images/comfy-gray-pants.jpg",
     },
   ],
 };
+
+
+// get search-box
+const searchBox = document.getElementById('search-box');
+
+// get search-btn
+const searchBtn = document.getElementById('search-btn');
+
+// get all items-button
+const itemsBtn = document.getElementById('items-button');
+
+// get all products container
+const allProducts = document.getElementById('all-products');
+
+
+
