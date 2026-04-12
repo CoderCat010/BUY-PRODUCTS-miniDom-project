@@ -142,6 +142,7 @@ for(let allData of products.data){
     const cardsContainer = document.createElement('div');
     // add class to style each one card
     cardsContainer.classList.add('cards-container');
+    cardsContainer.setAttribute('data-category', allData.category);
 
     //-----> create img container
     const imgContainer = document.createElement('div');
@@ -172,3 +173,22 @@ for(let allData of products.data){
     cardsContainer.appendChild(descriptionContainer);
     allProducts.appendChild(cardsContainer);
 }
+
+
+//-----> get categorywise product data once any button clicked
+itemsBtn.addEventListener('click', function(event){
+  const clickedBtn = event.target;
+  const eachOneProductsCard = document.querySelectorAll('.cards-container')
+
+  // check if clicked anywhere else expcet button 
+  if(clickedBtn.tagName !== 'BUTTON') return;
+
+  // get each one same catergory wise products 
+  for(let value of eachOneProductsCard){
+    if(clickedBtn.textContent === 'All' || value.getAttribute('data-category') === clickedBtn.textContent){
+     value.style.display = 'block'; 
+  }else{
+      value.style.display = 'none';
+  }
+  }
+})
