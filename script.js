@@ -64,6 +64,62 @@ let products = {
       price: "49",
       image: "./images/comfy-gray-pants.jpg",
     },
+
+    // product: 9
+    {
+      productName: "Comfy Gray Pants",
+      category: "Bottomwear",
+      price: "78",
+      image: "./images/bottomwear2.jpg",
+    },
+
+    // product: 10
+    {
+      productName: "Comfy Gray Pants",
+      category: "Bottomwear",
+      price: "49",
+      image: "./images/bottomwear3.jpg",
+    },
+
+    // product: 11
+    {
+      productName: "Comfy Gray Pants",
+      category: "Jacket",
+      price: "49",
+      image: "./images/jacket-2.jpg",
+    },
+
+    // product: 12
+    {
+      productName: "Comfy Gray Pants",
+      category: "Topwear",
+      price: "49",
+      image: "./images/topwear-2.jpg",
+    },
+
+    // product: 13
+    {
+      productName: "Comfy Gray Pants",
+      category: "Watch",
+      price: "49",
+      image: "./images/watch-3.jpg",
+    },
+
+    // product: 14
+    {
+      productName: "Comfy Gray Pants",
+      category: "Jacket",
+      price: "49",
+      image: "./images/jacket-3.jpg",
+    },
+
+    // product: 15
+    {
+      productName: "Comfy Gray Pants",
+      category: "Topwear",
+      price: "49",
+      image: "./images/topwaer-4.jpg",
+    },
   ],
 };
 
@@ -96,8 +152,30 @@ for(let allData of products.data){
     const images = document.createElement('img');
     images.setAttribute('src', allData.image);
 
+    // create product card content tite
+    const cardsTitle = document.createElement('h2');
+    // add class to style each one card
+    cardsTitle.classList.add('cards-title');
+    cardsTitle.textContent = allData.category;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Append the image to the image container, then add the image container to the card, and finally add the card to the products section so it appears on the page.
     imgContainer.appendChild(images);
     cardsContainer.appendChild(imgContainer);
+    cardsContainer.appendChild(cardsTitle);
     allProducts.appendChild(cardsContainer);
 }
