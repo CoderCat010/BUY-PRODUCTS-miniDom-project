@@ -53,7 +53,7 @@ let products = {
     {
       productName: "Brown Men's Jacket",
       category: "Jacket",
-      price: "189",
+      price: "19",
       image: "./images/brown-jacket.jpg",
     },
 
@@ -77,7 +77,7 @@ let products = {
     {
       productName: "Comfy Gray Pants",
       category: "Bottomwear",
-      price: "49",
+      price: "78",
       image: "./images/bottomwear3.jpg",
     },
 
@@ -85,7 +85,7 @@ let products = {
     {
       productName: "Comfy Gray Pants",
       category: "Jacket",
-      price: "49",
+      price: "55",
       image: "./images/jacket-2.jpg",
     },
 
@@ -93,7 +93,7 @@ let products = {
     {
       productName: "Comfy Gray Pants",
       category: "Topwear",
-      price: "49",
+      price: "30",
       image: "./images/topwear-2.jpg",
     },
 
@@ -101,7 +101,7 @@ let products = {
     {
       productName: "Comfy Gray Pants",
       category: "Watch",
-      price: "49",
+      price: "41",
       image: "./images/watch-3.jpg",
     },
 
@@ -109,7 +109,7 @@ let products = {
     {
       productName: "Comfy Gray Pants",
       category: "Jacket",
-      price: "49",
+      price: "67",
       image: "./images/jacket-3.jpg",
     },
 
@@ -117,13 +117,12 @@ let products = {
     {
       productName: "Comfy Gray Pants",
       category: "Topwear",
-      price: "49",
+      price: "23",
       image: "./images/topwaer-4.jpg",
     },
   ],
 };
-
-
+//========================================================
 // get search-box
 const searchBox = document.getElementById('search-box');
 
@@ -137,45 +136,39 @@ const itemsBtn = document.getElementById('items-button');
 const allProducts = document.getElementById('all-products');
 
 
-// get each product data through loop
+// get each one product data through loop
 for(let allData of products.data){
     // create product card container 
     const cardsContainer = document.createElement('div');
     // add class to style each one card
     cardsContainer.classList.add('cards-container');
 
-    // create img container
+    //-----> create img container
     const imgContainer = document.createElement('div');
     // add class to style each one img
     imgContainer.classList.add('img-container');
-    // set attribute
     const images = document.createElement('img');
     images.setAttribute('src', allData.image);
 
-    // create product card content tite
-    const cardsTitle = document.createElement('h2');
+    //-----> each one producty card title & description parent container
+    const descriptionContainer = document.createElement('div');
     // add class to style each one card
-    cardsTitle.classList.add('cards-title');
-    cardsTitle.textContent = allData.category;
+    descriptionContainer.classList.add('cards-description');
+
+    // create each one product card content tite
+    const cardsTitle = document.createElement('h2');
+    cardsTitle.textContent = allData.productName;
+
+    // create each one product card content price button
+    const cardsPriceBtn = document.createElement('button');
+    cardsPriceBtn.textContent = '$'+ allData.price;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Append the image to the image container, then add the image container to the card, and finally add the card to the products section so it appears on the page.
+    //-----> Append all elements to the products section so it appears on the page.
     imgContainer.appendChild(images);
     cardsContainer.appendChild(imgContainer);
-    cardsContainer.appendChild(cardsTitle);
+    descriptionContainer.appendChild(cardsTitle);
+    descriptionContainer.appendChild(cardsPriceBtn);
+    cardsContainer.appendChild(descriptionContainer);
     allProducts.appendChild(cardsContainer);
 }
